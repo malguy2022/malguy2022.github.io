@@ -22,7 +22,6 @@
 		<link rel="prefetch" as="script" href="/wp-content/themes/Sakurairo-main/js/page.js?ver=2.6.3.1">
 		<title>MiJiu &#8211; 米玖个人内容分享站</title>
 <meta name="robots" content="max-image-preview:large">
-<link rel="dns-prefetch" href="//static.addtoany.com">
 <link rel="dns-prefetch" href="//s.nmxc.ltd">
 <link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.6.1" type="text/css" media="all">
 <style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
@@ -32,37 +31,6 @@
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
 <link rel="stylesheet" id="saukra-css-css" href="/wp-content/themes/Sakurairo-main/style.css?ver=2.6.3.1" type="text/css" media="all">
-<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
-<script type="text/javascript" id="addtoany-core-js-before">
-/* <![CDATA[ */
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
-	Share: "分享",
-	Save: "收藏",
-	Subscribe: "订阅",
-	Email: "电子邮件",
-	Bookmark: "书签",
-	ShowAll: "显示全部服务",
-	ShowLess: "显示部分服务",
-	FindServices: "查找服务",
-	FindAnyServiceToAddTo: "动态查找任何用以添加的服务",
-	PoweredBy: "Powered by",
-	ShareViaEmail: "通过电子邮件分享",
-	SubscribeViaEmail: "通过电子邮件订阅",
-	BookmarkInYourBrowser: "添加为浏览器书签",
-	BookmarkInstructions: "按Ctrl+D或⌘+D可将此页面加入书签。",
-	AddToYourFavorites: "添加至收藏夹",
-	SendFromWebOrProgram: "通过任何电邮地址或电邮程序发送",
-	EmailProgram: "电子邮件程序",
-	More: "更多&#8230;",
-	ThanksForSharing: "感谢分享！",
-	ThanksForFollowing: "感谢您的关注！"
-};
-/* ]]> */
-</script>
-<script type="text/javascript" defer src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-<script type="text/javascript" defer src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/">
 <style>.site-top .lower nav {display: block !important;}
 :root{
@@ -122,6 +90,157 @@ font-family:  ;
 
 /*预加载部分*/
 
+#preload {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 99999;
+}
+
+#preload li.active {
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    list-style: none;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+#preloader_3 {
+    position:relative;
+}
+#preloader_3:before {
+    background:#FCCD00;
+    -webkit-animation: preloader_3_before 1.5s infinite ease-in-out;
+    -moz-animation: preloader_3_before 1.5s infinite ease-in-out;
+    -ms-animation: preloader_3_before 1.5s infinite ease-in-out;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+}
+#preloader_3:after {
+    background:#ffea99;
+    left:22px;
+    -webkit-animation: preloader_3_after 1.5s infinite ease-in-out;
+    -moz-animation: preloader_3_after 1.5s infinite ease-in-out;
+    -ms-animation: preloader_3_after 1.5s infinite ease-in-out;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+}
+#preloader_3:before,#preloader_3:after {
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#ffea99;
+    position:absolute;
+    content:'';
+}
+@-webkit-keyframes preloader_3_before {
+    0% {
+        -webkit-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -webkit-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -webkit-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-webkit-keyframes preloader_3_after {
+    0% {
+        -webkit-transform: translateX(0px)
+    }
+    50% {
+        -webkit-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -webkit-transform: translateX(0px)
+    }
+}
+@-moz-keyframes preloader_3_before {
+    0% {
+        -moz-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -moz-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -moz-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-moz-keyframes preloader_3_after {
+    0% {
+        -moz-transform: translateX(0px)
+    }
+    50% {
+        -moz-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -moz-transform: translateX(0px)
+    }
+}
+@-ms-keyframes preloader_3_before {
+    0% {
+        -ms-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -ms-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -ms-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-ms-keyframes preloader_3_after {
+    0% {
+        -ms-transform: translateX(0px)
+    }
+    50% {
+        -ms-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -ms-transform: translateX(0px)
+    }
+}
+@keyframes preloader_3_before {
+    0% {
+        transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        transform: translateX(0px) rotate(0deg)
+    }
+}
+@keyframes preloader_3_after {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
 
 /*深色模式*/
 /*可变项目*/
@@ -687,10 +806,10 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 					}
 				}</style>
 			<style id="uagb-style-conditional-extension">@media (min-width: 1025px){body .uag-hide-desktop.uagb-google-map__wrap,body .uag-hide-desktop{display:none !important}}@media (min-width: 768px) and (max-width: 1024px){body .uag-hide-tab.uagb-google-map__wrap,body .uag-hide-tab{display:none !important}}@media (max-width: 767px){body .uag-hide-mob.uagb-google-map__wrap,body .uag-hide-mob{display:none !important}}</style>
+<style id="uagb-style-frontend-1151">.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}</style>
 <style id="uagb-style-frontend-1101">.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}</style>
 <style id="uagb-style-frontend-1089">.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}</style>
 <style id="uagb-style-frontend-1066">.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}</style>
-<style id="uagb-style-frontend-1">.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}</style>
 <link rel="icon" href="/wp-content/uploads/2024/08/cropped-logo-32x32.png" sizes="32x32">
 <link rel="icon" href="/wp-content/uploads/2024/08/cropped-logo-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/wp-content/uploads/2024/08/cropped-logo-180x180.png">
@@ -702,6 +821,11 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 		</head>
 
 <body class="home blog wp-custom-logo hfeed chinese-font   elementor-default elementor-kit-29">
+			<div id="preload">
+			<li data-id="3" class="active">
+				<div id="preloader_3"></div>
+			</li>
+		</div>
 		<div class="scrollbar" id="bar"></div>
 	<header class="site-header no-select" role="banner">
 		<div class="site-top">
@@ -832,19 +956,48 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 		<h1 class="main-title"> <i class="fa-regular fa-bookmark" aria-hidden="true"></i> <br> Article </h1>
 			<article class="post post-list-thumb  post-list-show" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<div class="post-thumb">
-			<a href="/1101/">
-				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?2">			</a>
+			<a href="/1151/">
+				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?14">			</a>
 		</div>
 <!-- thumbnail-->
 		<div class="post-content-wrap">
 			<div class="post-content">
 				<div class="post-date">
-					<i class="fa-regular fa-clock"></i>发布于 11 小时前									</div>
+					<i class="fa-regular fa-clock"></i>发布于 58 分钟前									</div>
+				<a href="/1151/" class="post-title">
+					<h3>二次元动漫美图头像分享27期</h3>
+				</a>
+				<div class="post-meta">
+										<span><i class="fa-regular fa-eye"></i>2 热度</span>
+					<span class="comments-number">
+						<i class="fa-regular fa-comment"></i>
+						<a href="/1151/#respond">无~</a>					</span>
+					<span><i class="fa-regular fa-folder"></i>
+					<a href="/uncategorized/">
+					Uncategorized					</a>
+					</span>
+				</div>
+				<div class="float-content">
+								<p>本期推荐 防失联 支持我 文章左下角小猪存钱罐标志，点击有收款码，资助我一杯奶茶钱催更吧~</p>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="post post-list-thumb  post-list-show" itemscope="" itemtype="http://schema.org/BlogPosting">
+		<div class="post-thumb">
+			<a href="/1101/">
+				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?37">			</a>
+		</div>
+<!-- thumbnail-->
+		<div class="post-content-wrap">
+			<div class="post-content">
+				<div class="post-date">
+					<i class="fa-regular fa-clock"></i>发布于 21 小时前									</div>
 				<a href="/1101/" class="post-title">
 					<h3>二次元动漫美图头像分享26期</h3>
 				</a>
 				<div class="post-meta">
-										<span><i class="fa-regular fa-eye"></i>13 热度</span>
+										<span><i class="fa-regular fa-eye"></i>15 热度</span>
 					<span class="comments-number">
 						<i class="fa-regular fa-comment"></i>
 						<a href="/1101/#respond">无~</a>					</span>
@@ -855,27 +1008,25 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 				</div>
 				<div class="float-content">
 								<p>本期推荐 防失联 支持我 文章左下角小猪存钱罐标志，点击有收款码，资助我一杯奶茶钱催更吧~</p>
-<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="/1101/" data-a2a-title="二次元动漫美图头像分享26期">
-<a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wechat" href="https://www.addtoany.com/add_to/wechat?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="WeChat" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wordpress" href="https://www.addtoany.com/add_to/wordpress?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="WordPress" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_douban" href="https://www.addtoany.com/add_to/douban?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="Douban" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_qzone" href="https://www.addtoany.com/add_to/qzone?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="Qzone" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F1101%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB26%E6%9C%9F" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
-</div></div>				</div>
+				</div>
 			</div>
 		</div>
 	</article>
 	<article class="post post-list-thumb  post-list-show" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<div class="post-thumb">
 			<a href="/1089/">
-				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?89">			</a>
+				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?95">			</a>
 		</div>
 <!-- thumbnail-->
 		<div class="post-content-wrap">
 			<div class="post-content">
 				<div class="post-date">
-					<i class="fa-regular fa-clock"></i>发布于 12 小时前									</div>
+					<i class="fa-regular fa-clock"></i>发布于 22 小时前									</div>
 				<a href="/1089/" class="post-title">
 					<h3>二次元动漫美图头像分享25期</h3>
 				</a>
 				<div class="post-meta">
-										<span><i class="fa-regular fa-eye"></i>13 热度</span>
+										<span><i class="fa-regular fa-eye"></i>14 热度</span>
 					<span class="comments-number">
 						<i class="fa-regular fa-comment"></i>
 						<a href="/1089/#respond">无~</a>					</span>
@@ -886,27 +1037,25 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 				</div>
 				<div class="float-content">
 								<p>本期推荐 防失联</p>
-<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="/1089/" data-a2a-title="二次元动漫美图头像分享25期">
-<a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wechat" href="https://www.addtoany.com/add_to/wechat?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="WeChat" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wordpress" href="https://www.addtoany.com/add_to/wordpress?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="WordPress" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_douban" href="https://www.addtoany.com/add_to/douban?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="Douban" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_qzone" href="https://www.addtoany.com/add_to/qzone?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="Qzone" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F1089%2F&amp;linkname=%E4%BA%8C%E6%AC%A1%E5%85%83%E5%8A%A8%E6%BC%AB%E7%BE%8E%E5%9B%BE%E5%A4%B4%E5%83%8F%E5%88%86%E4%BA%AB25%E6%9C%9F" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
-</div></div>				</div>
+				</div>
 			</div>
 		</div>
 	</article>
 	<article class="post post-list-thumb  post-list-show" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<div class="post-thumb">
 			<a href="/1066/">
-				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?93">			</a>
+				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?48">			</a>
 		</div>
 <!-- thumbnail-->
 		<div class="post-content-wrap">
 			<div class="post-content">
 				<div class="post-date">
-					<i class="fa-regular fa-clock"></i>发布于 12 小时前									</div>
+					<i class="fa-regular fa-clock"></i>发布于 23 小时前									</div>
 				<a href="/1066/" class="post-title">
 					<h3>Hello world!</h3>
 				</a>
 				<div class="post-meta">
-										<span><i class="fa-regular fa-eye"></i>13 热度</span>
+										<span><i class="fa-regular fa-eye"></i>14 热度</span>
 					<span class="comments-number">
 						<i class="fa-regular fa-comment"></i>
 						<a href="/1066/#respond">无~</a>					</span>
@@ -916,28 +1065,25 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 					</span>
 				</div>
 				<div class="float-content">
-								<p>Welcome to Astra Starter Templates. This is your first post. Edit &#8230;</p>
-<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="/1066/" data-a2a-title="Hello world!">
-<a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wechat" href="https://www.addtoany.com/add_to/wechat?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="WeChat" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wordpress" href="https://www.addtoany.com/add_to/wordpress?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="WordPress" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_douban" href="https://www.addtoany.com/add_to/douban?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="Douban" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_qzone" href="https://www.addtoany.com/add_to/qzone?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="Qzone" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F1066%2F&amp;linkname=Hello%20world%21" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
-</div></div>				</div>
+								<p>Welcome to Astra Starter Templates. This is your first post. Edit &#8230;</p>				</div>
 			</div>
 		</div>
 	</article>
 	<article class="post post-list-thumb  post-list-show" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<div class="post-thumb">
 			<a href="/1/">
-				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?34">			</a>
+				<img alt="post_img" class="lazyload" src="https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/outload.svg#lazyload-blur" data-src="https://api.maho.cc/random-img/pc.php?61">			</a>
 		</div>
 <!-- thumbnail-->
 		<div class="post-content-wrap">
 			<div class="post-content">
 				<div class="post-date">
-					<i class="fa-regular fa-clock"></i>发布于 13 小时前									</div>
+					<i class="fa-regular fa-clock"></i>发布于 23 小时前									</div>
 				<a href="/1/" class="post-title">
 					<h3>Hello world!</h3>
 				</a>
 				<div class="post-meta">
-										<span><i class="fa-regular fa-eye"></i>11 热度</span>
+										<span><i class="fa-regular fa-eye"></i>12 热度</span>
 					<span class="comments-number">
 						<i class="fa-regular fa-comment"></i>
 						<a href="/1/#comments">1 评论</a>					</span>
@@ -947,10 +1093,7 @@ background-image: url(https://s.nmxc.ltd/sakurairo_vision/@2.6/load_svg/ball.svg
 					</span>
 				</div>
 				<div class="float-content">
-								<p>Welcome to WordPress. This is your first post. Edit or delete it, &#8230;</p>
-<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="/1/" data-a2a-title="Hello world!">
-<a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wechat" href="https://www.addtoany.com/add_to/wechat?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="WeChat" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="Copy Link" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_wordpress" href="https://www.addtoany.com/add_to/wordpress?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="WordPress" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_douban" href="https://www.addtoany.com/add_to/douban?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="Douban" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_qzone" href="https://www.addtoany.com/add_to/qzone?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="Qzone" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=%2F1%2F&amp;linkname=Hello%20world%21" title="Print" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a>
-</div></div>				</div>
+								<p>Welcome to WordPress. This is your first post. Edit or delete it, &#8230;</p>				</div>
 			</div>
 		</div>
 	</article>
@@ -1048,7 +1191,7 @@ var starter_templates_zip_preview = {"AstColorPaletteVarPrefix":"--ast-global-",
 <script type="text/javascript" src="/wp-content/themes/Sakurairo-main/js/polyfill.js?ver=2.6.3.1" id="polyfills-js"></script>
 <script type="text/javascript" id="app-js-before">
 /* <![CDATA[ */
-var _iro = {"pjax":true,"movies":"close","windowheight":"auto","ajaxurl":"\/wp-admin\/admin-ajax.php","order":"asc","formpostion":"bottom","api":"\/wp-json\/","nonce":"1f84f09f74","google_analytics_id":"","gravatar_url":"weavatar.com\/avatar","NProgressON":true,"audio":false,"baguetteBox":false,"fancybox":false,"darkmode":true,"email_domain":"163.com","email_name":"malguy2022","ext_shared_lib":"","cookie_version_control":"","qzone_autocomplete":false,"site_name":"MiJiu","author_name":"mijiu","template_url":"\/wp-content\/themes\/Sakurairo-main","site_url":"","qq_api_url":"\/wp-json\/sakura\/v1\/qqinfo\/json","land_at_home":true,"live_search":false,"loading_ph":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/load_svg\/inload.svg","clipboardCopyright":true,"entry_content_style":"sakurairo","random_graphs_mts":true,"code_highlight":"hljs","comment_upload_img":false,"cache_cover":true,"site_bg_as_cover":false,"yiyan_api":["https:\/\/v1.hitokoto.cn\/","https:\/\/api.nmxc.ltd\/yiyan\/"],"skin_bg0":"","skin_bg1":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg1.png","skin_bg2":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg2.png","skin_bg3":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg3.png","skin_bg4":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg4.png","cover_api":"https:\/\/api.maho.cc\/random-img\/pc.php","dm_strategy":"time"}
+var _iro = {"pjax":true,"movies":"close","windowheight":"auto","ajaxurl":"\/wp-admin\/admin-ajax.php","order":"asc","formpostion":"bottom","api":"\/wp-json\/","nonce":"1f84f09f74","google_analytics_id":"","gravatar_url":"weavatar.com\/avatar","NProgressON":true,"audio":false,"baguetteBox":false,"fancybox":false,"darkmode":true,"email_domain":"163.com","email_name":"malguy2022","ext_shared_lib":"","cookie_version_control":"","qzone_autocomplete":false,"site_name":"MiJiu","author_name":"mijiu","template_url":"\/wp-content\/themes\/Sakurairo-main","site_url":"","qq_api_url":"\/wp-json\/sakura\/v1\/qqinfo\/json","land_at_home":true,"live_search":false,"loading_ph":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/load_svg\/inload.svg","clipboardCopyright":true,"entry_content_style":"sakurairo","random_graphs_mts":true,"code_highlight":"hljs","comment_upload_img":false,"cache_cover":true,"site_bg_as_cover":false,"yiyan_api":["https:\/\/v1.hitokoto.cn\/","https:\/\/api.nmxc.ltd\/yiyan\/"],"skin_bg0":"","skin_bg1":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg1.png","skin_bg2":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg2.png","skin_bg3":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg3.png","skin_bg4":"https:\/\/s.nmxc.ltd\/sakurairo_vision\/@2.6\/background\/bg4.png","cover_api":"https:\/\/api.maho.cc\/random-img\/pc.php","effect":{"amount":"less"},"dm_strategy":"time"}
 /* ]]> */
 </script>
 <script type="text/javascript" src="/wp-content/themes/Sakurairo-main/js/app.js?ver=2.6.3.1" id="app-js"></script>

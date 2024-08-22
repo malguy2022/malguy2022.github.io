@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="https://s.nmxc.ltd/sakurairo_vision/@2.6/basic/favicon.ico">
     <title>未找到页面 &#8211; MiJiu</title>
 <meta name="robots" content="max-image-preview:large">
-<link rel="dns-prefetch" href="//static.addtoany.com">
 <link rel="dns-prefetch" href="//s.nmxc.ltd">
 <style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
 .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
@@ -15,37 +14,6 @@
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
 <link rel="stylesheet" id="saukra-css-css" href="/wp-content/themes/Sakurairo-main/style.css?ver=2.6.3.1" type="text/css" media="all">
-<link rel="stylesheet" id="addtoany-css" href="/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16" type="text/css" media="all">
-<script type="text/javascript" id="addtoany-core-js-before">
-/* <![CDATA[ */
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
-	Share: "分享",
-	Save: "收藏",
-	Subscribe: "订阅",
-	Email: "电子邮件",
-	Bookmark: "书签",
-	ShowAll: "显示全部服务",
-	ShowLess: "显示部分服务",
-	FindServices: "查找服务",
-	FindAnyServiceToAddTo: "动态查找任何用以添加的服务",
-	PoweredBy: "Powered by",
-	ShareViaEmail: "通过电子邮件分享",
-	SubscribeViaEmail: "通过电子邮件订阅",
-	BookmarkInYourBrowser: "添加为浏览器书签",
-	BookmarkInstructions: "按Ctrl+D或⌘+D可将此页面加入书签。",
-	AddToYourFavorites: "添加至收藏夹",
-	SendFromWebOrProgram: "通过任何电邮地址或电邮程序发送",
-	EmailProgram: "电子邮件程序",
-	More: "更多&#8230;",
-	ThanksForSharing: "感谢分享！",
-	ThanksForFollowing: "感谢您的关注！"
-};
-/* ]]> */
-</script>
-<script type="text/javascript" defer src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-<script type="text/javascript" defer src="/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1" id="addtoany-jquery-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/">
 <style>.site-top .lower nav {display: block !important;}
 :root{
@@ -105,6 +73,157 @@ font-family:  ;
 
 /*预加载部分*/
 
+#preload {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 99999;
+}
+
+#preload li.active {
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    list-style: none;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+#preloader_3 {
+    position:relative;
+}
+#preloader_3:before {
+    background:#FCCD00;
+    -webkit-animation: preloader_3_before 1.5s infinite ease-in-out;
+    -moz-animation: preloader_3_before 1.5s infinite ease-in-out;
+    -ms-animation: preloader_3_before 1.5s infinite ease-in-out;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+}
+#preloader_3:after {
+    background:#ffea99;
+    left:22px;
+    -webkit-animation: preloader_3_after 1.5s infinite ease-in-out;
+    -moz-animation: preloader_3_after 1.5s infinite ease-in-out;
+    -ms-animation: preloader_3_after 1.5s infinite ease-in-out;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+}
+#preloader_3:before,#preloader_3:after {
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#ffea99;
+    position:absolute;
+    content:'';
+}
+@-webkit-keyframes preloader_3_before {
+    0% {
+        -webkit-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -webkit-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -webkit-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-webkit-keyframes preloader_3_after {
+    0% {
+        -webkit-transform: translateX(0px)
+    }
+    50% {
+        -webkit-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -webkit-transform: translateX(0px)
+    }
+}
+@-moz-keyframes preloader_3_before {
+    0% {
+        -moz-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -moz-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -moz-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-moz-keyframes preloader_3_after {
+    0% {
+        -moz-transform: translateX(0px)
+    }
+    50% {
+        -moz-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -moz-transform: translateX(0px)
+    }
+}
+@-ms-keyframes preloader_3_before {
+    0% {
+        -ms-transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        -ms-transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        -ms-transform: translateX(0px) rotate(0deg)
+    }
+}
+@-ms-keyframes preloader_3_after {
+    0% {
+        -ms-transform: translateX(0px)
+    }
+    50% {
+        -ms-transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        -ms-transform: translateX(0px)
+    }
+}
+@keyframes preloader_3_before {
+    0% {
+        transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        transform: translateX(50px) scale(1.2) rotate(260deg);
+        background:#ffea99;
+        border-radius:0px;
+    }
+    100% {
+        transform: translateX(0px) rotate(0deg)
+    }
+}
+@keyframes preloader_3_after {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background:#FCCD00;
+        border-radius:0px;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
 
 /*深色模式*/
 /*可变项目*/
